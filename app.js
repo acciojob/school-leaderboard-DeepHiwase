@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 // your code here!
 app.get("/topRankings", async (req, res) => {
   try {
-    let { limit = 20, offset = 0 } = req.query;
+    let { limit = onePageArticleCount, offset = 0 } = req.query;
 
     limit = parseInt(limit);
     offset = parseInt(offset);
